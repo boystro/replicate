@@ -1,3 +1,8 @@
+function loadscreen() {
+    document.getElementById("loading-wrapper").style.opacity = 0;
+}
+window.onload(loadscreen())
+
 // Variables
 const r_side_panel = document.getElementById("right-panel");
 const s2_project_slide_panel = document.getElementById("s2-wrapper-2");
