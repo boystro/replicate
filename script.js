@@ -1,6 +1,8 @@
+// Variables
 const r_side_panel = document.getElementById("right-panel");
 const s2_project_slide_panel = document.getElementById("s2-wrapper-2");
 const s6_posts_slide_panel = document.getElementById("s6-wrapper-2");
+
 var s2_left=0;
 var s6_left=0;
 
@@ -24,7 +26,6 @@ function s6Posts(dir) {
 // Scroll effects
 
 const objects = document.querySelectorAll(".scroll-effect");
-
 const options = {threshold: 0.17};
 const observer = new IntersectionObserver(function(
         entries,

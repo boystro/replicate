@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
+    <!-- Loading Screen -->
+    <div id="loading-wrapper" class="loading-wrapper loader-wrapper">
+        <img src="images/loader.gif" alt="Loading">
+    </div>
     
     <!-- Header / Nav-Bar -->
     <header>
@@ -378,7 +383,16 @@
         </div>
     </footer>
 
+    <!-- Scripts file source -->
     <script src="script.js"></script>
+    
+    <!-- jQuery - for loading Screen -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
 
 </body>
 </html>

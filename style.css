@@ -96,6 +96,25 @@ button {
   color: var(--accent-color-2);
 }
 
+.loading-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+}
+
+.loading-wrapper img {
+  border-radius: 15px;
+}
+
 header {
   height: 7em;
   display: -webkit-box;
