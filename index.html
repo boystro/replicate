@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>console.log("replicate") | id.boystro</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+        <img class="nav-logo" src="images/Logo_2.svg" alt="">
+        <nav class="nav nav-middle">
+            <ul>
+                <li><a class="active" href="">Home</a></li>
+                <li><a class="" href="">About</a></li>
+                <li><a class="" href="">Products</a></li>
+                <li><a class="" href="">Innovation Cell</a></li>
+                <li><a class="" href="">Blog</a></li>
+            </ul>
+        </nav>
+        <nav class="nav nav-right">
+            <ul>
+                <li><a class="remove-after" href=""><i class="fa fa-search"></i></a></li>
+                <li><a class="remove-after" href=""><i class="fa fa-shopping-cart"></i></a></li>
+                <li><a class="" href="">ENG</a></li>
+                <li><a class="remove-after" onclick="rightPanel()"><i class="fa fa-th"></i></a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slide in panel on the right side -->
+    <section id="right-panel" class="right-panel">
+        <button class="cross" onclick="rightPanel()">&Cross;</button>
+        <ul>
+            <li><a class="" href="">Facebook</a></li>
+            <li><a class="" href="">Instagram</a></li>
+            <li><a class="" href="">Behance</a></li>
+            <li><a class="" href="">Dribbble</a></li>
+            <li><a class="" href="">Email</a></li>
+        </ul>
+    </section>
+
+    <!-- Landing -->
+    <section class="content-landing">
+        <!-- 65% width -->
+        <div class="images">
+            <img class="banner banner-1" src="images/Banner_1@2x.jpg" alt="Bannner-1">
+            <img class="banner banner-2" src="images/Banner_2@2x.jpg" alt="Bannner-2">
+            <img class="banner banner-3" src="images/Banner_3@2x.jpg" alt="Bannner-3">
+            <img class="banner banner-4" src="images/Banner_4@2x.jpg" alt="Bannner-4">
+        </div>
+        <div class="float-element">
+            <h1>Some Tech</h1>
+            <h1>Company</h1>
+            <h3>Explore Project &rightarrow;</h3>
+        </div>
+    </section>
+
+
+    <!-- Section-1 -->
+    <section class="content content-1">
+        <div class="design-element">
+            <div class="element">01</div>
+            <img src="images/Logo_2.svg" alt="">
+        </div>
+        <div class="heading heading-1">
+            <h1>We help and solve your tech problem.</h1>
+            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos corporis fugiat provident, molestias similique recusandae!</h3>
+        </div>
+        <div class="sect-body sect-body-1">
+            <div class="card">
+                <img src="images/icon_1.svg" alt="">
+                <div class="head">Market Research</div>
+                <div class="sub-head">Lorem Ipsum is simply text the printing and typesetting standard industry.</div>
+            </div>
+            <div class="card">
+                <img src="images/icon_2.svg" alt="">
+                <div class="head">Wireframe/Sketch</div>
+                <div class="sub-head">Lorem Ipsum is simply text the printing and typesetting standard industry.</div>
+            </div>
+            <div class="card">
+                <img src="images/icon_3.svg" alt="">
+                <div class="head">Creative Design</div>
+                <div class="sub-head">Lorem Ipsum is simply text the printing and typesetting standard industry.</div>
+            </div>
+        </div>
+        <div class="sect-foot sect-foot-1"></div>
+    </section>
+
+    <!-- Section-2 -->
+    <section class="content content-2">
+        <div class="design-element">
+            <div class="element">02</div>
+            <img src="images/Logo_2.svg" alt="">
+        </div>
+        <div class="heading heading-2">
+            <h1>Latest Projects</h1>
+            <h3><a href="#">View All</a></h3>
+        </div>
+        <div class="sect-body sect-body-2">
+            <div class="wrapper">
+                <div class="wrapper-2" id="s2-wrapper-2">
+                    <div class="card">
+                        <img src="images/Project_1.jpg" alt="">
+                        <div class="info">
+                            <div class="head">Bits N Bytes</div>
+                            <div class="sub-head">Branding</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/Project_2.jpg" alt="">
+                        <div class="info">
+                            <div class="head">Bits N Bytes</div>
+                            <div class="sub-head">Branding</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/Project_3.jpg" alt="">
+                        <div class="info">
+                            <div class="head">Bits N Bytes</div>
+                            <div class="sub-head">Branding</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/Project_4.jpg" alt="">
+                        <div class="info">
+                            <div class="head">Bits N Bytes</div>
+                            <div class="sub-head">Branding</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sect-foot sect-foot-2">
+            <div class="button-pair">
+                <button class="left" onclick="s2Projects('l')">🞀</button>
+                <button class="right" onclick="s2Projects('r')">🞂</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section-3 -->
+    <section class="content content-3">
+        <div class="design-element">
+            <div class="element">03</div>
+            <img src="images/Logo_2.svg" alt="">
+        </div>
+        <div class="heading heading-3">
+            <h1>Meet the Team<br>Our "So-Called" Professionals</h1>
+            <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci ratione, laboriosam deleniti eaque corrupti consectetur.</h3>
+        </div>
+        <div class="sect-body sect-body-3">
+            <div class="card">
+                <img src="images/team_3.jpg" alt="">
+                <div class="name">Tech Guy with Hoodie</div>
+                <div class="work">Web Developer</div>
+                <pre>Fb  Tw  In</pre>
+            </div>
+            <div class="card">
+                <img src="images/team_2.jpg" alt="">
+                <div class="name">Smiling Lady</div>
+                <div class="work">Founder</div>
+                <pre>Fb  Tw  In</pre>
+            </div>
+            <div class="card">
+                <img src="images/team_1.jpg" alt="">
+                <div class="name">Serious Guy</div>
+                <div class="work">Something in Our Company</div>
+                <pre>Fb  Tw  In</pre>
+            </div>
+        </div>
+        <div class="sect-foot sect-foot-3"></div>
+    </section>
+
+    <!-- Section-4 -->
+    <section class="content content-4">
+        <div class="design-element">
+            <div class="element">04</div>
+            <img src="images/Logo_2.svg" alt="">
+        </div>
+        <div class="heading heading-4">
+            <h1>Partners & clients</h1>
+            <h3>We're constantly refining our product. Adding new features. Working to help your business grow.</h3>
+        </div>
+        <div class="sect-body sect-body-4">
+            <img src="images/client_4.png" alt="Contact">
+            <img src="images/client_3.png" alt="NorthStar">
+            <img src="images/client_1.png" alt="AMD">
+            <img src="images/client_6.png" alt="Keurig">
+            <img src="images/client_3.png" alt="NorthStar">
+            <img src="images/client_5.png" alt="TOGA">
+        </div>
+        <div class="sect-foot sect-foot-4"></div>
+    </section>
+
+    <!-- Section-5 -->
+    <section class="content content-5">
+        <div class="design-element">
+            <div class="element">05</div>
+            <img src="images/Logo_2.svg" alt="">
+        </div>
+        <div class="heading heading-5">
+            <h1>Recent News & Stories</h1>
+            <h3>Share your stories and news with everyone.</h3>
+        </div>
+        <div class="sect-body sect-body-5">
+            <div class="card">
+                <img src="images/News_1@2x.jpg" alt="">
+                <div class="post-by">
+                    <img src="images/Team_1_Copy_2.jpg" alt="">
+                    <div class="name">Posted by Colabrio</div>
+                    <div class="date">July 5, 2019</div>
+                </div>
+                <div class="read-by"><a href="#">Digital Strategy</a> 4 min read</div>
+                <div class="post">The Ultimate Guide to Make Your WordPress Journal.</div>
+                <div class="rm">Read more &rightarrow;</div>
+            </div>
+            <div class="card">
+                <img src="images/News_2@2x.jpg" alt="">
+                <div class="post-by">
+                    <img src="images/Team_2_Copy_2.jpg" alt="">
+                    <div class="name">Posted by Stormie</div>
+                    <div class="date">July 5, 2019</div>
+                </div>
+                <div class="read-by"><a href="#">Personal</a> 4 min read</div>
+                <div class="post">The Highly Contemporary UI/UX Design from a london.</div>
+                <div class="rm">Read more &rightarrow;</div>
+            </div>
+            <div class="card">
+                <img src="images/News_3@2x.jpg" alt="">
+                <div class="post-by">
+                    <img src="images/Team_3_Copy_2.jpg" alt="">
+                    <div class="name">Posted by Angela</div>
+                    <div class="date">July 5, 2019</div>
+                </div>
+                <div class="read-by"><a href="#">Personal</a> 4 min read</div>
+                <div class="post">A Color Excercise For Our Brand's Illustration.</div>
+                <div class="rm">Read more &rightarrow;</div>
+            </div>
+        </div>
+        <div class="sect-foot sect-foot-5"></div>
+    </section>
+    
+    <!-- Section-6 -->
+    <section class="content content-6">
+        <div class="design-element">
+            <div class="element">06</div>
+            <img src="images/Logo_2.svg" alt="">
+        </div>
+        <div class="heading heading-6">
+            <h1>What our clients say</h1>
+            <h3>Share your stories and news with everyone</h3>
+            <div class="button-pair">
+                <button class="left" onclick="s6Posts('l')">🞀</button>
+                <button class="right" onclick="s6Posts('r')">🞂</button>
+            </div>
+        </div>
+        <div class="sect-body sect-body-6">
+            <div class="wrapper">
+                <div class="wrapper-2" id="s6-wrapper-2">
+                    <div class="card">
+                        <div class="left">
+                            <img src="images/client_1.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore expedita vitae beatae repudiandae placeat tempore provident a mollitia odio veritatis.
+                            </p>
+                            <div class="review-type">Paid Review</div>
+                            <div class="company">Creative Company</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="left">
+                            <img src="images/client_2.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum cupiditate sint cum fugit? Recusandae illo optio, reprehenderit magni natus cum suscipit delectus.
+                            </p>
+                            <div class="review-type">Paid Review</div>
+                            <div class="company">Creative Company</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="left">
+                            <img src="images/client_3.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat vero atque, saepe libero distinctio rem eos modi.
+                            </p>
+                            <div class="review-type">Paid Review</div>
+                            <div class="company">Creative Company</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="left">
+                            <img src="images/client_4.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus unde cupiditate aspernatur a sapiente ipsa similique maxime alias eum dolores, assumenda, quidem, ex quod rerum?
+                            </p>
+                            <div class="review-type">Paid Review</div>
+                            <div class="company">Creative Company</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sect-foot sect-foot-6"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wrapper">
+            <div class="branding">
+                <img id="logo-2" src="images/Logo_1.svg" alt="">
+                <p>
+                    Don't be shy, get in touch with us<br>
+                    and create the world again.
+                </p>
+                <pre class="logos">Fb   Tw   In   Be</pre>
+            </div>
+            <div class="contact contact-phone">
+                <h4>Phone</h4>
+                <div class="txt">+80 (0)5"25 34 95 89</div>
+            </div>
+            <div class="contact contact-enquiries">
+                <h4>Enquirues</h4>
+                <div class="txt">info@oleez.site</div>
+            </div>
+            <div class="contact contact-address">
+                <h4>Address</h4>
+                <div class="txt">33 rue Burdeaue 69089<br>Paris France</div>
+            </div>
+            <div class="contact contact-workhours">
+                <h4>Work Hours</h4>
+                <div class="txt">Weekdays: 09:00 - 18:00<br>Weekends: 11:00 - 17:00</div>
+            </div>
+            <div class="foot">
+                <div class="cpr">&copy; 2020, BNB</div>
+                <div class="tm">All right reserved.</div>
+                <div class="cred">Made with ❤ by Dhruva IIITK</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+Tech Stack
+    HTML5
+    CSS
+    Vanilla JS
+
+Scoring Factor
+    Replication Extent
+    Responsiveness
+    Code Presentability
+
+Other Factors
+    Submit till 31st October 2021
+    No. of Characters is not accounted for scoring.
+    Deploy the website on Github.
+    Submit the repository link of Github.
+
+Tutorial for deployment.
+https://www.youtube.com/watch?v=8hrJ4oN1u_8
