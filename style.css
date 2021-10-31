@@ -647,7 +647,7 @@ section.content.content-1 .sect-body .card + .card {
   margin-left: 2em;
 }
 
-section.content.content-1 .sect-body.scroll-effect {
+section.content.content-1 .sect-body .card.scroll-effect {
   position: relative;
   bottom: -50%;
   opacity: 0;
@@ -655,7 +655,7 @@ section.content.content-1 .sect-body.scroll-effect {
   transition: bottom ease 1s, opacity ease 1s;
 }
 
-section.content.content-1 .sect-body.add-effect {
+section.content.content-1 .sect-body .card.add-effect {
   bottom: 0;
   opacity: 1;
 }
@@ -876,13 +876,13 @@ section.content.content-4 .sect-body img {
   height: 2.7rem;
 }
 
-section.content.content-4 .sect-body.scroll-effect {
+section.content.content-4 .sect-body img.scroll-effect {
   opacity: 0;
   -webkit-transition: opacity ease 1s;
   transition: opacity ease 1s;
 }
 
-section.content.content-4 .sect-body.add-effect {
+section.content.content-4 .sect-body img.add-effect {
   opacity: 1;
 }
 
@@ -1006,14 +1006,14 @@ section.content.content-5 .sect-body .card:hover img {
   opacity: .6;
 }
 
-section.content.content-5 .sect-body.scroll-effect {
+section.content.content-5 .sect-body .card.scroll-effect {
   position: relative;
   bottom: -25%;
   -webkit-transition: bottom ease 1s;
   transition: bottom ease 1s;
 }
 
-section.content.content-5 .sect-body.add-effect {
+section.content.content-5 .sect-body .card.add-effect {
   bottom: 0;
 }
 

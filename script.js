@@ -25,7 +25,7 @@ function s6Posts(dir) {
 
 const objects = document.querySelectorAll(".scroll-effect");
 
-const options = {threshold: .5};
+const options = {threshold: 0.17};
 const observer = new IntersectionObserver(function(
         entries,
         appearOnScroll

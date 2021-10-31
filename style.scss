@@ -517,21 +517,21 @@ section.content {
                 & + .card{
                     margin-left: 2em;
                 }
-            }
 
-            &.scroll-effect {
-                position: relative;
-                bottom: -50%;
-                opacity: 0;
-                transition:
-                    bottom ease 1s,
-                    opacity ease 1s
-                ;
-            }
-
-            &.add-effect {
-                bottom: 0;
-                opacity: 1;
+                &.scroll-effect {
+                    position: relative;
+                    bottom: -50%;
+                    opacity: 0;
+                    transition:
+                        bottom ease 1s,
+                        opacity ease 1s
+                    ;
+                }
+    
+                &.add-effect {
+                    bottom: 0;
+                    opacity: 1;
+                }
             }
         }
     }
@@ -702,17 +702,18 @@ section.content {
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             grid-row-gap: 6em;
+
             img {
                 height: 2.7rem;
-            }
+                
+                &.scroll-effect {
+                    opacity: 0;
+                    transition: opacity ease 1s;
+                }
 
-            &.scroll-effect {
-                opacity: 0;
-                transition: opacity ease 1s;
-            }
-
-            &.add-effect {
-                opacity: 1;
+                &.add-effect {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -820,16 +821,16 @@ section.content {
                         opacity: .6;
                     }
                 }
-            }
 
-            &.scroll-effect {
-                position: relative;
-                bottom: -25%;
-                transition: bottom ease 1s;
-            }
-
-            &.add-effect {
-                bottom: 0;
+                &.scroll-effect {
+                    position: relative;
+                    bottom: -25%;
+                    transition: bottom ease 1s;
+                }
+    
+                &.add-effect {
+                    bottom: 0;
+                }
             }
         }
     }
