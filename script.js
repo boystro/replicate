@@ -21,6 +21,32 @@ function s6Posts(dir) {
     if (dir=='r') if (s6_left<1) s6_left++;
 }
 
+// Scroll effects
+
+const objects = document.querySelectorAll(".scroll-effect");
+
+const options = {threshold: .5};
+const observer = new IntersectionObserver(function(
+        entries,
+        appearOnScroll
+    ) {
+        entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add("add-effect");
+            appearOnScroll.unobserve(entry.target);
+        }
+        });
+    },
+    options);
+
+objects.forEach(object => {
+        observer.observe(object);
+    });
+
+
+// Function scrolls slide options
 function interv_call() {
     if (s2_left==0) s2_project_slide_panel.style.left = '0rem';
     else if (s2_left==1) s2_project_slide_panel.style.left = '-38rem';

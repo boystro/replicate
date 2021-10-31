@@ -1,6 +1,3 @@
-// Google Fonts Import - Roboto Light 300
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-
 // Custom Properties
 :root {
     --light-color: #fff;
@@ -128,24 +125,69 @@ nav ul {
     font-weight: var(--fw-h2);
     margin-right: 4em;
 
-    li a{
+    li {
         position: relative;
 
-        &::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 30%;
-            background-color: rgb(0, 132, 255);
-            opacity: 33%;
-            top: 40%;
-            left: -5%;
-            transition: width 300ms ease-in-out;
+        a{
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 30%;
+                background-color: rgb(0, 132, 255);
+                opacity: 33%;
+                top: 40%;
+                left: -5%;
+                transition: width 300ms ease-in-out;
+            }
+
+            &:hover::after, &.active::after {
+                width: 110%;
+            }
+
         }
 
-        &:hover::after, &.active::after {
-            width: 110%;
+        a:hover ~ ul.menu, ul.menu:hover {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
+
+        a:focus ~ ul.menu, ul.menu:hover {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        ul.menu {
+            background-color: var(--dark-color);
+            position: absolute;
+            top: 120%;
+            left: 0;
+            min-width: 150px;
+            padding: 1.5em 1em;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transform: translate(-10%, 0);
+
+            clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+            transition: clip-path 250ms ease-in-out;
+            
+            li {
+                font-weight: var(--fw-h4);
+                font-size: 12px;
+                padding: .5em;
+
+                a{
+                    color: var(--light-color);
+
+                    &:hover {
+                        color: var(--accent-color-2);
+                    }
+                }
+            }
+        }
+
     }
 }
 
@@ -416,6 +458,21 @@ section.content {
                 }
             }
         }
+
+        &.scroll-effect {
+            position: relative;
+            bottom: -50%;
+            opacity: 0;
+            transition:
+                bottom ease 1s,
+                opacity ease 1s
+            ;
+        }
+
+        &.add-effect{
+            bottom: 0;
+            opacity: 1;
+        }
     }
     .sect-body{
         grid-area: sect-body;
@@ -460,6 +517,21 @@ section.content {
                 & + .card{
                     margin-left: 2em;
                 }
+            }
+
+            &.scroll-effect {
+                position: relative;
+                bottom: -50%;
+                opacity: 0;
+                transition:
+                    bottom ease 1s,
+                    opacity ease 1s
+                ;
+            }
+
+            &.add-effect {
+                bottom: 0;
+                opacity: 1;
             }
         }
     }
@@ -526,6 +598,15 @@ section.content {
                     }
                 }
             }
+
+            &.scroll-effect {
+                opacity: 0;
+                transition: opacity ease 1s;
+            }
+
+            &.add-effect {
+                opacity: 1;
+            }
         }
 
         .sect-foot {
@@ -562,6 +643,16 @@ section.content {
 
                 img {
                     width: 122.5%;
+                    // opacity: 0;
+
+                    &.scroll-effect {
+                        transform: rotateY(270deg);
+                        transition: transform ease 1s;
+                    }
+
+                    &.add-effect {
+                        transform: rotateY(0deg);
+                    }
                 }
                 
                 .name{
@@ -583,6 +674,16 @@ section.content {
     }
 
     &.content-4 {
+
+        &.scroll-effect {
+            position: relative;
+            bottom: -25%;
+            transition: bottom ease 1s;
+        }
+
+        &.add-effect {
+            bottom: 0;
+        }
         background-color: var(--accent-color-1);
         grid-template-rows: 7.5rem auto auto 0rem;
 
@@ -603,6 +704,15 @@ section.content {
             grid-row-gap: 6em;
             img {
                 height: 2.7rem;
+            }
+
+            &.scroll-effect {
+                opacity: 0;
+                transition: opacity ease 1s;
+            }
+
+            &.add-effect {
+                opacity: 1;
             }
         }
     }
@@ -679,7 +789,7 @@ section.content {
 
                 .read-by {
                     position: relative;
-                    font-size: 14px;
+                    font-size: 12px;
                     padding: .6rem 2rem;
                     z-index: 2;
 
@@ -705,11 +815,21 @@ section.content {
 
                 &:hover{
                     color: white;
-                    background-color: #00000066;
+                    background-color: #000000;
                     img {
-                        opacity: 1;
+                        opacity: .6;
                     }
                 }
+            }
+
+            &.scroll-effect {
+                position: relative;
+                bottom: -25%;
+                transition: bottom ease 1s;
+            }
+
+            &.add-effect {
+                bottom: 0;
             }
         }
     }
@@ -782,6 +902,16 @@ section.content {
                     }
                 }
             }
+
+            &.scroll-effect {
+                position: relative;
+                bottom: -25%;
+                transition: bottom ease 1s;
+            }
+
+            &.add-effect {
+                bottom: 0;
+            }
         }
     }
 }
@@ -808,7 +938,7 @@ section.content {
         flex-direction: column;
 
         .nav-middle {
-            width: 100%;
+            width: 80%;
             margin: 0;
 
             ul {
@@ -835,6 +965,8 @@ section.content {
         margin: 0;
     }
 
+    nav ul li ul.menu {transform: translate(-50%, 0);}
+
     // Right-Side Panel
     section.right-panel {
         width: 100%;
@@ -854,12 +986,13 @@ section.content {
             left: 50%;
 
             h1 {
-                font-size: var(--fs-h3);
+                font-size: var(--fs-h1);
+                margin-right: 0;
             }
 
             h3 {
                 color: var(--accent-color-2);
-                font-size: .6rem;
+                font-size: .8rem;
             }
         }
     }
@@ -1033,8 +1166,8 @@ section.content {
                 text-align: center;
 
                 .button-pair {
-                    top: 50%;
-                    right: 10%;
+                    width: 100%;
+                    justify-content: space-between;
                 }
             }
 

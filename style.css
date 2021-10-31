@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 :root {
   --light-color: #fff;
   --dark-color: #070707;
@@ -132,6 +131,10 @@ nav ul {
   margin-right: 4em;
 }
 
+nav ul li {
+  position: relative;
+}
+
 nav ul li a {
   position: relative;
 }
@@ -151,6 +154,58 @@ nav ul li a::after {
 
 nav ul li a:hover::after, nav ul li a.active::after {
   width: 110%;
+}
+
+nav ul li a:hover ~ ul.menu, nav ul li ul.menu:hover {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+nav ul li a:focus ~ ul.menu, nav ul li ul.menu:hover {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+nav ul li ul.menu {
+  background-color: var(--dark-color);
+  position: absolute;
+  top: 120%;
+  left: 0;
+  min-width: 150px;
+  padding: 1.5em 1em;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transform: translate(-10%, 0);
+          transform: translate(-10%, 0);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+  -webkit-transition: -webkit-clip-path 250ms ease-in-out;
+  transition: -webkit-clip-path 250ms ease-in-out;
+  transition: clip-path 250ms ease-in-out;
+  transition: clip-path 250ms ease-in-out, -webkit-clip-path 250ms ease-in-out;
+}
+
+nav ul li ul.menu li {
+  font-weight: var(--fw-h4);
+  font-size: 12px;
+  padding: .5em;
+}
+
+nav ul li ul.menu li a {
+  color: var(--light-color);
+}
+
+nav ul li ul.menu li a:hover {
+  color: var(--accent-color-2);
 }
 
 .fa-th {
@@ -511,6 +566,19 @@ section.content .heading h3 .heading h3 {
   margin-top: 1rem;
 }
 
+section.content .heading.scroll-effect {
+  position: relative;
+  bottom: -50%;
+  opacity: 0;
+  -webkit-transition: bottom ease 1s, opacity ease 1s;
+  transition: bottom ease 1s, opacity ease 1s;
+}
+
+section.content .heading.add-effect {
+  bottom: 0;
+  opacity: 1;
+}
+
 section.content .sect-body {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
@@ -577,6 +645,19 @@ section.content.content-1 .sect-body .card .sub-head {
 
 section.content.content-1 .sect-body .card + .card {
   margin-left: 2em;
+}
+
+section.content.content-1 .sect-body.scroll-effect {
+  position: relative;
+  bottom: -50%;
+  opacity: 0;
+  -webkit-transition: bottom ease 1s, opacity ease 1s;
+  transition: bottom ease 1s, opacity ease 1s;
+}
+
+section.content.content-1 .sect-body.add-effect {
+  bottom: 0;
+  opacity: 1;
 }
 
 section.content.content-2 {
@@ -659,6 +740,16 @@ section.content.content-2 .sect-body .wrapper .wrapper-2 .card .info .sub-head {
   margin-bottom: 1em;
 }
 
+section.content.content-2 .sect-body.scroll-effect {
+  opacity: 0;
+  -webkit-transition: opacity ease 1s;
+  transition: opacity ease 1s;
+}
+
+section.content.content-2 .sect-body.add-effect {
+  opacity: 1;
+}
+
 section.content.content-2 .sect-foot {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -716,6 +807,20 @@ section.content.content-3 .sect-body .card img {
   width: 122.5%;
 }
 
+section.content.content-3 .sect-body .card img.scroll-effect {
+  -webkit-transform: rotateY(270deg);
+          transform: rotateY(270deg);
+  -webkit-transition: -webkit-transform ease 1s;
+  transition: -webkit-transform ease 1s;
+  transition: transform ease 1s;
+  transition: transform ease 1s, -webkit-transform ease 1s;
+}
+
+section.content.content-3 .sect-body .card img.add-effect {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
 section.content.content-3 .sect-body .card .name {
   margin-top: 2em;
   font-weight: var(--fw-h3);
@@ -735,6 +840,17 @@ section.content.content-4 {
   background-color: var(--accent-color-1);
   -ms-grid-rows: 7.5rem auto auto 0rem;
       grid-template-rows: 7.5rem auto auto 0rem;
+}
+
+section.content.content-4.scroll-effect {
+  position: relative;
+  bottom: -25%;
+  -webkit-transition: bottom ease 1s;
+  transition: bottom ease 1s;
+}
+
+section.content.content-4.add-effect {
+  bottom: 0;
 }
 
 section.content.content-4 .design-element .element::after {
@@ -758,6 +874,16 @@ section.content.content-4 .sect-body {
 
 section.content.content-4 .sect-body img {
   height: 2.7rem;
+}
+
+section.content.content-4 .sect-body.scroll-effect {
+  opacity: 0;
+  -webkit-transition: opacity ease 1s;
+  transition: opacity ease 1s;
+}
+
+section.content.content-4 .sect-body.add-effect {
+  opacity: 1;
 }
 
 section.content.content-5 {
@@ -847,7 +973,7 @@ section.content.content-5 .sect-body .card .post-by .date {
 
 section.content.content-5 .sect-body .card .read-by {
   position: relative;
-  font-size: 14px;
+  font-size: 12px;
   padding: .6rem 2rem;
   z-index: 2;
 }
@@ -873,11 +999,22 @@ section.content.content-5 .sect-body .card .rm {
 
 section.content.content-5 .sect-body .card:hover {
   color: white;
-  background-color: #00000066;
+  background-color: #000000;
 }
 
 section.content.content-5 .sect-body .card:hover img {
-  opacity: 1;
+  opacity: .6;
+}
+
+section.content.content-5 .sect-body.scroll-effect {
+  position: relative;
+  bottom: -25%;
+  -webkit-transition: bottom ease 1s;
+  transition: bottom ease 1s;
+}
+
+section.content.content-5 .sect-body.add-effect {
+  bottom: 0;
 }
 
 section.content.content-6 {
@@ -964,6 +1101,17 @@ section.content.content-6 .sect-body .wrapper .wrapper-2 .card + .card {
   margin-left: 3.5em;
 }
 
+section.content.content-6 .sect-body.scroll-effect {
+  position: relative;
+  bottom: -25%;
+  -webkit-transition: bottom ease 1s;
+  transition: bottom ease 1s;
+}
+
+section.content.content-6 .sect-body.add-effect {
+  bottom: 0;
+}
+
 @media screen and (max-width: 800px) {
   :root {
     --fs-h1: 2rem;
@@ -984,7 +1132,7 @@ section.content.content-6 .sect-body .wrapper .wrapper-2 .card + .card {
             flex-direction: column;
   }
   header .nav-middle {
-    width: 100%;
+    width: 80%;
     margin: 0;
   }
   header .nav-middle ul {
@@ -1004,6 +1152,10 @@ section.content.content-6 .sect-body .wrapper .wrapper-2 .card + .card {
   .fa-th {
     margin: 0;
   }
+  nav ul li ul.menu {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
   section.right-panel {
     width: 100%;
     right: -100%;
@@ -1019,11 +1171,12 @@ section.content.content-6 .sect-body .wrapper .wrapper-2 .card + .card {
     left: 50%;
   }
   section.content-landing .float-element h1 {
-    font-size: var(--fs-h3);
+    font-size: var(--fs-h1);
+    margin-right: 0;
   }
   section.content-landing .float-element h3 {
     color: var(--accent-color-2);
-    font-size: .6rem;
+    font-size: .8rem;
   }
   section.content {
     min-height: 200px;
@@ -1162,8 +1315,10 @@ section.content.content-6 .sect-body .wrapper .wrapper-2 .card + .card {
     text-align: center;
   }
   section.content.content-6 .heading .button-pair {
-    top: 50%;
-    right: 10%;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   section.content.content-6 .sect-body {
     width: 100%;
