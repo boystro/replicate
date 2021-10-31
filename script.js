@@ -1,3 +1,4 @@
+// Loading Screen
 window.addEventListener("load", function () {
     const loader = document.getElementById("loading-wrapper");
     loader.classList.add("loaded");
