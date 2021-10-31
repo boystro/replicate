@@ -97,6 +97,7 @@ button {
 }
 
 .loading-wrapper {
+  background: #fff;
   height: 100vh;
   width: 100vw;
   display: -ms-grid;
@@ -113,6 +114,35 @@ button {
 
 .loading-wrapper img {
   border-radius: 15px;
+}
+
+.loading-wrapper.loaded {
+  -webkit-animation: load-screen 1s;
+          animation: load-screen 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes load-screen {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes load-screen {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 header {

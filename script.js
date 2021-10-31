@@ -1,7 +1,7 @@
-function loadscreen() {
-    document.getElementById("loading-wrapper").style.opacity = 0;
-}
-window.onload(loadscreen())
+window.addEventListener("load", function () {
+    const loader = document.getElementById("loading-wrapper");
+    loader.classList.add("loaded");
+})
 
 // Variables
 const r_side_panel = document.getElementById("right-panel");
