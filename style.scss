@@ -388,9 +388,11 @@ section.content-landing {
             opacity: 0;
             animation: landing-text 1s;
             animation-fill-mode: forwards;
+            animation-delay: 500ms;
+            
             &+h1{
                 margin-right: .9em;
-                animation-delay: 75ms;
+                animation-delay: 575ms;
             }
         }
         h3 {
@@ -401,7 +403,7 @@ section.content-landing {
             font-size: 14px;
             opacity: 0;
             animation: landing-text 1s;
-            animation-delay: 150ms;
+            animation-delay: 650ms;
             animation-fill-mode: forwards;
         }
     }

@@ -443,12 +443,14 @@ section.content-landing .float-element h1 {
           animation: landing-text 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 
 section.content-landing .float-element h1 + h1 {
   margin-right: .9em;
-  -webkit-animation-delay: 75ms;
-          animation-delay: 75ms;
+  -webkit-animation-delay: 575ms;
+          animation-delay: 575ms;
 }
 
 section.content-landing .float-element h3 {
@@ -460,8 +462,8 @@ section.content-landing .float-element h3 {
   opacity: 0;
   -webkit-animation: landing-text 1s;
           animation: landing-text 1s;
-  -webkit-animation-delay: 150ms;
-          animation-delay: 150ms;
+  -webkit-animation-delay: 650ms;
+          animation-delay: 650ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
